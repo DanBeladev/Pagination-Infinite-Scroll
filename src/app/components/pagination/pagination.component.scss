@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+}
+.indexes {
+  border: 1px solid #555;
+  display: flex;
+  justify-content: space-between;
+  width:50%;
+  padding:10px;
+}
+
+.example-form-field {
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #555
+}
+
+.indexes {
+  cursor: pointer;
+  .index {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .active {
+    font-weight: bold;
+    background-color: #555;
+    color: blue;
+  }
+  .not-active {
+    color: black;
+  }
+}
+
+
