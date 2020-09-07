@@ -24,20 +24,6 @@
   top: 0;
   z-index: 1009;
   background: rgba(112, 191, 93, 0.5);
-
-  .bee-spinner {
-    width: 20%;
-    height: 20%;
-    position: fixed;
-    top: 40%;
-    left: calc(50% - 10%);
-    z-index: 100;
-    background-image: url(../../../assets/bee-spinner.png);
-    background-repeat: no-repeat;
-    background-size: 97%;
-    animation: bouncing 0.4s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite
-      alternate both;
-  }
 }
 
 .bottom {
