@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-side-menu',
@@ -8,16 +9,18 @@ import { Router } from '@angular/router';
 })
 export class SideMenuComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: AppService) { }
 
   ngOnInit(): void {
   }
 
   gotoPagination() {
-    this.router.navigateByUrl('/pagination');
+    this.service.showPagination();
+    // this.router.navigateByUrl('/pagination');
   }
   gotoScroll() {
-    this.router.navigateByUrl('/scroll');
+    this.service.showInfiniteScroll();
+    // this.router.navigateByUrl('/scroll');
   }
 
 }

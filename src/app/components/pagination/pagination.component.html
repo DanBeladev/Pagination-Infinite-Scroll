@@ -44,14 +44,16 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-  <div class="indexes">
-    <div
+  <div class="indexes-container">
+    <div class="indexes">
+      <div
       *ngFor="let index of pageIndexes"
       (click)="fetchUsers(index)"
       [ngClass]="index == currentIndex ? 'active' : 'not-active'"
       class="index"
-    >
+      >
       {{ index }}
     </div>
+  </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
-<div class="example-container mat-elevation-z8">
+<h1>Infinite Scroll Table</h1>
+<div class="mat-elevation-z8">
   <mat-table #table [dataSource]="dataSource" (scroll)="onTableScroll($event)">
 
     <!--- Note that these columns can be defined in any order.
@@ -25,6 +26,6 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
 </div>
-<div *ngIf="index>5">
+<div *ngIf="IsEmptyResponses">
   There is no more users
 </div>

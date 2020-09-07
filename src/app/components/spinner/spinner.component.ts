@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import {SpinnerService} from '../../services/spinner.service';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-spinner',
@@ -9,7 +10,7 @@ import {SpinnerService} from '../../services/spinner.service';
 export class SpinnerComponent implements OnInit {
 
   showSpinner = false;
-  constructor(private spinnerService: SpinnerService, private cdRef: ChangeDetectorRef) {
+  constructor(public service: AppService, private spinnerService: SpinnerService, private cdRef: ChangeDetectorRef) {
 
   }
 
@@ -18,7 +19,6 @@ export class SpinnerComponent implements OnInit {
   }
 
   init() {
-
     this.spinnerService.getSpinnerObserver().subscribe((status) => {
       this.showSpinner = (status === 'start');
       this.cdRef.detectChanges();

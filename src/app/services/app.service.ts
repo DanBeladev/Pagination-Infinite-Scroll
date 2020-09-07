@@ -7,8 +7,18 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class AppService {
+  showPaginationPage = true;
+  showScrollPage = false;
   constructor(private http: HttpClient) {}
 
+  showPagination() {
+    this.showPaginationPage = true;
+    this.showScrollPage = false;
+  }
+  showInfiniteScroll() {
+    this.showPaginationPage = false;
+    this.showScrollPage = true;
+  }
   getUsers(index: number): Observable<any> {
     const headerDict = {
       'app-id': `${environment.APP_ID_TOKEN}`,

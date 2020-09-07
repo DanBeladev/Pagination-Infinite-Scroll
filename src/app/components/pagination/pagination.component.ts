@@ -1,20 +1,19 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
-import { MatTableDataSource } from "@angular/material/table";
-import { MockUser } from "../../../types/types";
-import { AppService } from "src/app/services/app.service";
-import { SpinnerService } from "src/app/services/spinner.service";
-import { RESOURCE_CACHE_PROVIDER } from "@angular/platform-browser-dynamic";
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MockUser } from '../../../types/types';
+import { AppService } from 'src/app/services/app.service';
+import { SpinnerService } from 'src/app/services/spinner.service';
 @Component({
-  selector: "app-pagination",
-  templateUrl: "./pagination.component.html",
-  styleUrls: ["./pagination.component.scss"],
+  selector: 'app-pagination',
+  templateUrl: './pagination.component.html',
+  styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent implements OnInit {
-  value = "";
+  value = '';
   error = '';
   currentIndex: number;
   pageIndexes: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  displayedColumns: string[] = ['id',"name", "picture"];
+  displayedColumns: string[] = ['id', 'name', 'picture'];
   dataSource = new MatTableDataSource<MockUser>([]);
   constructor(private service: AppService, private spinner: SpinnerService) {
     this.currentIndex = 1;
@@ -35,7 +34,7 @@ export class PaginationComponent implements OnInit {
           this.spinner.requestEnded();
         },
         (err) => {
-          console.log("error occurued: ", err);
+          console.log('error occurued: ', err);
           this.error = err.error;
           this.spinner.resetSpinner();
         }
@@ -55,7 +54,7 @@ export class PaginationComponent implements OnInit {
   }
 
   searchUserById(id) {
-    if (id && id !== "") {
+    if (id && id !== '') {
       const data = this.getUsersFromCache(id);
       if (!data) {
         this.spinner.requestStarted();
@@ -71,7 +70,7 @@ export class PaginationComponent implements OnInit {
           (err) => {
             this.spinner.resetSpinner();
             this.error = err.error;
-            console.log("err is: ", err);
+            console.log('err is: ', err);
           }
         );
       } else {
@@ -83,8 +82,8 @@ export class PaginationComponent implements OnInit {
   }
 
   clearInput() {
-    this.value = "";
-    this.error = "";
+    this.value = '';
+    this.error = '';
     this.fetchUsers(this.currentIndex);
   }
 }
