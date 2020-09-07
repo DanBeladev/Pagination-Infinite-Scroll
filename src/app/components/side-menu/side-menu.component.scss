@@ -8,5 +8,15 @@
 .button {
   width: 100%;
   border: 1px solid #555;
-  margin-bottom: 1px;
+  margin: 1px;
+}
+
+.name {
+  width: 100%;
+  background-color: #ff22;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+  padding:5px;
+  margin-bottom: 5px;
 }

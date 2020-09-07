@@ -1,22 +1,26 @@
+// angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
-import { ScrollComponent } from './components/scroll/scroll.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+// material
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
-import { MatPaginatorModule } from '@angular/material/paginator';
+// import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+// components
+import { AppComponent } from './app.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { ScrollComponent } from './components/scroll/scroll.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ScrollSpinnerComponent } from './components/scroll-spinner/scroll-spinner.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ScrollComponent,
     SideMenuComponent,
     SpinnerComponent,
+    ScrollSpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,14 +37,14 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     MatSidenavModule,
     MatButtonModule,
     MatTableModule,
-    MatPaginatorModule,
+    // MatPaginatorModule,
     MatFormFieldModule,
     MatIconModule,
     FormsModule,
     MatInputModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

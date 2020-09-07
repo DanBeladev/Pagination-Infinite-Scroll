@@ -1,16 +1,11 @@
 .home-container {
   display: flex;
   flex-direction: row;
-  background-color: red;
 }
 
-.pagination
+.pagination, .scroll
 {
   width: 100%;
-  background-color: green;
 
 }
-.scroll {
-  background-color: blue;
-  width: 100%;
-}
+

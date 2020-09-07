@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   API_URL: 'https://dummyapi.io/data/api/user?limit=20&page=',
   API_GET_USER_URL: 'https://dummyapi.io/data/api/user/',
-  APP_ID_TOKEN: '5f53858700797e1ea11b0945',
+  APP_ID_TOKEN: '5f56a4e7ffbb4b411384a932',
 };
 
 /*

@@ -8,6 +8,4 @@ import { AppService } from './services/app.service';
 })
 export class AppComponent {
   constructor(public service: AppService) {}
-  isPagination = this.service.showPaginationPage;
-  isScroll = this.service.showScrollPage;
 }

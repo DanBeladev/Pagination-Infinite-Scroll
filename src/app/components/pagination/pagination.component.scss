@@ -1,25 +1,25 @@
 table {
   width: 100%;
 }
+
+.example-form-field {
+  width: 250px;
+  padding: 10px;
+  border: 2px solid #555;
+  margin-bottom:12px ;
+}
+
+.indexes-container{
+  margin-top:12px ;
+  display: flex;
+  justify-content: center;
 .indexes {
+  cursor: pointer;
   border: 1px solid #555;
   display: flex;
   justify-content: space-between;
   width:50%;
   padding:10px;
-}
-
-.example-form-field {
-  width: 250px;
-  padding: 10px;
-  border: 2px solid #555
-}
-
-.indexes-container{
-  display: flex;
-  justify-content: flex-end;
-.indexes {
-  cursor: pointer;
   .index {
     width: 30px;
     height: 30px;

@@ -24,12 +24,14 @@ export class PaginationComponent implements OnInit {
   }
 
   fetchUsers(index: number) {
+    // check if the relevant data exist in cache
     const data: any = this.getUsersFromCache(index);
     if (!data) {
       this.spinner.requestStarted();
       this.service.getUsers(index).subscribe(
         (res: any) => {
           this.dataSource = res.data;
+          // save data in cache
           localStorage.setItem(`${index}`, JSON.stringify(this.dataSource));
           this.spinner.requestEnded();
         },

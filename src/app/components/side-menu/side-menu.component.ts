@@ -16,11 +16,9 @@ export class SideMenuComponent implements OnInit {
 
   gotoPagination() {
     this.service.showPagination();
-    // this.router.navigateByUrl('/pagination');
   }
   gotoScroll() {
     this.service.showInfiniteScroll();
-    // this.router.navigateByUrl('/scroll');
   }
 
 }

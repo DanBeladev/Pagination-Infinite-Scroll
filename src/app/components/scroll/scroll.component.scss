@@ -7,8 +7,6 @@
 .mat-table {
   overflow: auto;
   max-height: 500px;
+  min-width: 100% !important;
 }
 
-table {
-  width: 100%;
-}
