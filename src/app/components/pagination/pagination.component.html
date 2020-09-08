@@ -1,8 +1,9 @@
-<h1>Pagination Table</h1>
+<div class="title">Pagination</div>
 <mat-form-field class="example-form-field">
-  <input matInput type="text" placeholder="Search..." [(ngModel)]="value"
+  <input matInput type="text"[(ngModel)]="value"
   (keydown.enter)="searchUserById(value)"
   />
+  <mat-placeholder class="placeholder">Search</mat-placeholder>
   <button
     mat-button
     *ngIf="value"

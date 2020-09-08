@@ -1,15 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 .light {
-  --background: #f1faee;
+  --background:#f4fcfc;
   --background-alt: #a8dadc;
-  --foreground: #1d3557;
+  --foreground: #000000;
+  --button-bg: #6faba8;
+  --button-text: #f1faee;
   --accent: #0e8185;
+  --bodrer: #1111;
 }
 .dark {
-  --background: #1d3557;
+  --background: #0f2e2c;
   --background-alt: #457b9d;
   --foreground: #f1faee;
+  --button-bg: #c1dbda;
+  --button-text: #0f2e2c;
   --accent: #84a59d;
+  --bodrer: #f5f5f5;
 }
 html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -17,12 +23,46 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: var(--background);
  }
 
- .button {color: var(--background);
- background-color: var(--foreground);
+ .button {
+   color: var(--button-text);
+   background-color: var(--button-bg);
  }
+ .mat-focused .placeholder {
+  color: var(--foreground);
+}
 
- .h1, .div {
-   color: var(--background);
+.mat-form-field-underline {
+background-color: var(--foreground) !important;
+}
+.placeholder {
+color: var(--foreground);
+}
+
+.mat-row:nth-child(even){
+  background-color:var(--background);
+  }
+
+.mat-row:nth-child(odd){
+  background-color:var(--background);
+  }
+  .mat-header-cell {
+    background-color:var(--button-bg);
+   }
+  .mat-cell {
+    color: (var(--foreground));
+}
+
+ h1 {
+  color: var(--foreground);
+  font-family: sans-serif;
+}
+
+.example-form-field {
+  border-color: var(--bodrer);
+}
+
+div {
+   color: var(--foreground);
    background-color:var (--foreground);
  }
 

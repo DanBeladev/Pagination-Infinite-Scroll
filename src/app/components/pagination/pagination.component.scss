@@ -1,14 +1,18 @@
 table {
-  width: 100%;
+  width: 90%;
 }
 
 .example-form-field {
-  width: 250px;
+  width: 350px;
   padding: 10px;
-  border: 2px solid #555;
+  border: 1px solid;
   margin-bottom:12px ;
 }
-
+.title {
+  font-size: 30px;
+  margin: 20px;
+  font-weight: bold;
+}
 .indexes-container{
   margin-top:12px ;
   display: flex;
