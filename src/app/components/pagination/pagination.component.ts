@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { MockUser } from '../../../types/types';
+import { User } from '../../../types/types';
 import { AppService } from 'src/app/services/app.service';
 import { SpinnerService } from 'src/app/services/spinner.service';
 @Component({
@@ -14,7 +14,7 @@ export class PaginationComponent implements OnInit {
   currentIndex: number;
   pageIndexes: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   displayedColumns: string[] = ['id', 'name', 'picture'];
-  dataSource = new MatTableDataSource<MockUser>([]);
+  dataSource = new MatTableDataSource<User>([]);
   constructor(private service: AppService, private spinner: SpinnerService) {
     this.currentIndex = 1;
   }
@@ -65,7 +65,7 @@ export class PaginationComponent implements OnInit {
           (res: any) => {
             const newData = [];
             newData[0] = res;
-            this.dataSource = new MatTableDataSource<MockUser>(newData);
+            this.dataSource = new MatTableDataSource<User>(newData);
             localStorage.setItem(`${id}`, JSON.stringify(res));
             this.spinner.requestEnded();
           },
@@ -78,7 +78,7 @@ export class PaginationComponent implements OnInit {
       } else {
         const dataArr = [];
         dataArr[0] = data;
-        this.dataSource = new MatTableDataSource<MockUser>(dataArr);
+        this.dataSource = new MatTableDataSource<User>(dataArr);
       }
     }
   }

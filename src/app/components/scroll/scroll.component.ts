@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
-import { MockUser } from 'src/types/types';
+import { User } from 'src/types/types';
 import { MatTableDataSource } from '@angular/material/table';
 import { SpinnerService } from 'src/app/services/spinner.service';
 
@@ -8,10 +8,11 @@ import { SpinnerService } from 'src/app/services/spinner.service';
   selector: 'app-scroll',
   templateUrl: './scroll.component.html',
   styleUrls: ['./scroll.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class ScrollComponent implements OnInit {
   displayedColumns: string[] = ['name', 'email', 'picture'];
-  dataSource = new MatTableDataSource<MockUser>([]);
+  dataSource = new MatTableDataSource<User>([]);
   index = 1;
   IsEmptyResponses = false;
 
