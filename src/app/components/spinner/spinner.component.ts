@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { SpinnerService } from '../../services/spinner.service';
 import { AppService } from 'src/app/services/app.service';
 
@@ -6,6 +6,7 @@ import { AppService } from 'src/app/services/app.service';
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SpinnerComponent implements OnInit {
   showSpinner = false;

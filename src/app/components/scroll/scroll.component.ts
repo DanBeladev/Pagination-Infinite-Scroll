@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
 import { User } from 'src/types/types';
 import { MatTableDataSource } from '@angular/material/table';
@@ -8,7 +8,8 @@ import { SpinnerService } from 'src/app/services/spinner.service';
   selector: 'app-scroll',
   templateUrl: './scroll.component.html',
   styleUrls: ['./scroll.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScrollComponent implements OnInit {
   displayedColumns: string[] = ['name', 'email', 'picture'];
@@ -41,7 +42,6 @@ export class ScrollComponent implements OnInit {
       this.spinner.requestStarted();
       this.service.getUsers(index).subscribe(
         (res) => {
-          console.log('res is: ', res);
           if (res.data.length <= 0) {
             this.IsEmptyResponses = true;
           }
