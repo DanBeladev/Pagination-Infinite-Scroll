@@ -1,4 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+.light {
+  --background: #f1faee;
+  --background-alt: #a8dadc;
+  --foreground: #1d3557;
+  --accent: #0e8185;
+}
+.dark {
+  --background: #1d3557;
+  --background-alt: #457b9d;
+  --foreground: #f1faee;
+  --accent: #84a59d;
+}
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: var(--foreground);
+  background-color: var(--background);
+ }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ .button {color: var(--background);
+ background-color: var(--foreground);
+ }
+
+ .h1, .div {
+   color: var(--background);
+   background-color:var (--foreground);
+ }
+

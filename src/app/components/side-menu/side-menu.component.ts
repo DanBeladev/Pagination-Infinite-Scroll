@@ -21,4 +21,8 @@ export class SideMenuComponent implements OnInit {
     this.service.showInfiniteScroll();
   }
 
-}
+  changeTheme() {
+      document.body.classList.toggle('light');
+      document.body.classList.toggle('dark');
+    }
+  }

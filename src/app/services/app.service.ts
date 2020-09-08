@@ -38,8 +38,6 @@ export class AppService {
     const requestOptions = {
       headers: new HttpHeaders(headerDict),
     };
-    // GorKRYsi8zHkLq9siyfU
-    // H1oN2F8v53t7GK0nQ6km
     return this.http.get<any>(`${environment.API_GET_USER_URL}${id}`, requestOptions);
   }
 }
