@@ -1,27 +1,35 @@
-# IronSourceHomeAssignment
+# Iron Source Home Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+Dan Beladev - danbeladev@gmail.com - *Home Assignment - Iron Source*
 
-## Development server
+This app is written in Angular 9 and it simulates a two concepts for presenting a page that contains a lot of information:
+pagination table and infinite scroll table
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+Run the web-app repository from the `Pagination-Infinite-Scroll`: 'https://github.com/DanBeladev/Pagination-Infinite-Scroll'
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install
+npm start
+```
 
-## Running unit tests
+The client should now run locally on port 4200.
+You can access it from the browser via: `http://localhost:4200`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### API
+I used 'https://dummyapi.io/' api to display the required data.
+This API contains an endpoint for user search by id, so in the search box should to enter a specific Id of the user in order to make an ajax call and present the relevant user.
 
-## Further help
+## Extras
+- I added a toggle to the left menu which replaces themes using css variables.
+- I used Docker to wrap the application.
+- I used ViewEncapsulation to work with ShadowDom.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+It was a challenging but very instructive task
