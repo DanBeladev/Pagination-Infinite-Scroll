@@ -9,12 +9,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 In order to run the application you first need to build the docker image from within the project directory:
 ```
-docker build -t iron-source-app .
+docker build -t app .
 ```
 
 Then, run the container (I used port 8080 but you can change it if needed):
 ```
-docker run -p 8080:80 iron-source-app
+docker run -p 8080:80 app
 ```
 
 You can access it from the browser via:
