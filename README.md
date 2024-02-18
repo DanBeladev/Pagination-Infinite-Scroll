@@ -1,6 +1,3 @@
-# Iron Source Home Assignment
-
-Dan Beladev - danbeladev@gmail.com - *Home Assignment - Iron Source*
 
 This application simulates two techniques of presenting information:
 - Pagination table
